@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/axios";
-import "./AdminPanel.css"; // ✅ Import CSS
+import "./AdminPanel.css"; 
 
 const AdminPanel = () => {
   const [users, setUsers] = useState([]);
