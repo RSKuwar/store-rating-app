@@ -23,7 +23,7 @@ const Dashboard = () => {
       <h2>{getWelcomeMessage()}</h2>
       <p>You're logged in to the Store Rating Platform.</p>
 
-      {/* 👉 Add this for store owners */}
+      {/* store owners */}
       {user.role === "owner" && (
         <div style={{ marginTop: "1rem" }}>
           <Link to="/add-store" className="btn-link">
