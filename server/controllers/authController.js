@@ -19,11 +19,11 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    console.log("Login attempt:", email, password); // Logging input
+    console.log("Login attempt:", email, password); 
 
     const user = await findUserByEmail(email);
     if (!user) {
-      console.log("User not found for email:", email); // This line
+      console.log("User not found for email:", email); 
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
