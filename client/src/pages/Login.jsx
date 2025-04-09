@@ -15,16 +15,15 @@ const Login = () => {
       const res = await api.post("/auth/login", { email, password });
       localStorage.setItem("token", res.data.token);
 
-      const role = res.data.role; // ✅ use role directly
-      localStorage.setItem("role", role); // (optional) save role
-
+      const role = res.data.role; 
+      localStorage.setItem("role", role); 
       // Redirect based on role
       if (role === "admin") {
         navigate("/admin");
       } else if (role === "owner") {
         navigate("/dashboard");
       } else {
-        navigate("/stores"); // ✅ user goes to stores page to rate
+        navigate("/stores");
       }
     } catch (err) {
       console.error("Login error:", err.response?.data || err.message);
